@@ -52,7 +52,7 @@ public class basicTitleTest {
 	    assertTrue(actualTitle.contains(expectedTitle));
     
 	
-    	driver = new Augmenter().augment( driver );
+//    	driver = new Augmenter().augment( driver );
 	
 
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
