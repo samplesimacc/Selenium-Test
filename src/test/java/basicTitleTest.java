@@ -19,10 +19,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class basicTitleTest {
 	
 	//URL to visit
-	public String QWE="www.facebook.com"
+	public String QWE="www.facebook.com";
 	
 	//Title to check
-	public String QWE1="book"
+	public String QWE1="book";
 	public String nodeURL = "http://selenium-hub:4444/wd/hub";
 
 	public static void main(String[] args){
