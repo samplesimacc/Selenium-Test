@@ -22,7 +22,7 @@ public class basicTitleTest {
 	public String QWE="www.facebook.com"
 	
 	//Title to check
-	public String QWE1="Google"
+	public String QWE1="book"
 	public String nodeURL = "http://selenium-hub:4444/wd/hub";
 
 	public static void main(String[] args){
@@ -35,23 +35,25 @@ public class basicTitleTest {
 	
 	@Test
 	public void testSelenium() throws IOException
-	{			
+	{	
+		private static Logger log = Logger.getLogger(LoggingObject.class);
+
 		DesiredCapabilities capability = DesiredCapabilities.firefox();
 		capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
 		capability.setBrowserName("firefox");
         WebDriver driver = new RemoteWebDriver(new URL(nodeURL), capability);
-        System.out.println("navigating to: " + QWE);
+	log.info("navigating to: " + QWE);
+
         driver.get(QWE);
-        System.out.println("succesfully navigated to: " + QWE);
-        
+        log.info("succesfully navigated to: " + QWE);
         String actualTitle = driver.getTitle();
         String expectedTitle = QWE1;
         
         assertTrue(actualTitle.contains(expectedTitle));
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        System.out.println("Screenshot Successful");
+        log.info("Screenshot Successful");
         FileUtils.copyFile(screenshot, new File("Screenshot.png"));
-        System.out.println("Screenshot Saved");
+        log.info("Screenshot Saved");
         
         driver.quit();
 
