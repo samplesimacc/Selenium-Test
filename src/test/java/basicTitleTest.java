@@ -36,13 +36,13 @@ public class basicTitleTest {
 	@Test
 	public void testSelenium() throws IOException
 	{
-		//FirefoxProfile firefoxProfile = new FirefoxProfile();
+		FirefoxProfile firefoxProfile = new FirefoxProfile();
 		//firefoxProfile.setPreference("xpinstall.signatures.required",false);				
 		DesiredCapabilities capability = DesiredCapabilities.firefox();
-		//capability.setCapability(FirefoxDriver.PROFILE,firefoxProfile);
+		capability.setCapability(FirefoxDriver.PROFILE,firefoxProfile);
 		capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
 		capability.setBrowserName("firefox");
-        RemoteWebDriver driver = new RemoteWebDriver(new URL(nodeURL), capability);
+        WebDriver driver = new RemoteWebDriver(new URL(nodeURL), capability);
         System.out.println("navigating to: " + QWE);
         driver.get(QWE);
         System.out.println("succesfully navigated to: " + QWE);
@@ -50,12 +50,10 @@ public class basicTitleTest {
         String actualTitle = driver.getTitle();
         String expectedTitle = QWE1;
 	    assertTrue(actualTitle.contains(expectedTitle));
-    
-	
-		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         System.out.println("Screenshot Successful");
-        FileUtils.copyFile(srcFile, new File("Screenshot.png"));
+        FileUtils.copyFile(screenshot, new File("Screenshot.png"));
         System.out.println("Screenshot Saved");
         
         driver.quit();
