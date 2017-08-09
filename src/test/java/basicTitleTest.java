@@ -32,12 +32,12 @@ public class basicTitleTest {
 		testng.addListener(tla);
 		testng.run();
 	}
-	
+	private static Logger log = Logger.getLogger(LoggingObject.class);
+
 	@Test
 	public void testSelenium() throws IOException
 	{	
-		private static Logger log = Logger.getLogger(LoggingObject.class);
-
+		
 		DesiredCapabilities capability = DesiredCapabilities.firefox();
 		capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
 		capability.setBrowserName("firefox");
