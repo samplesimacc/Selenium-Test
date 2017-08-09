@@ -42,7 +42,7 @@ public class basicTitleTest {
 		//capability.setCapability(FirefoxDriver.PROFILE,firefoxProfile);
 		capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
 		capability.setBrowserName("firefox");
-        WebDriver driver = new RemoteWebDriver(new URL(nodeURL), capability);
+        RemoteWebDriver driver = new RemoteWebDriver(new URL(nodeURL), capability);
         System.out.println("navigating to: " + QWE);
         driver.get(QWE);
         System.out.println("succesfully navigated to: " + QWE);
