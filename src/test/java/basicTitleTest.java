@@ -19,7 +19,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class basicTitleTest {
 	
 	//URL to visit
-	public String QWE="www.facebook.com";
+	public String QWE="http://www.google.com";
 	
 	//Title to check
 	public String QWE1="Facebook";
