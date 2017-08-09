@@ -52,12 +52,10 @@ public class basicTitleTest {
 	    assertTrue(actualTitle.contains(expectedTitle));
     
 	
-//    	driver = new Augmenter().augment( driver );
-	
-
-        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+//        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         System.out.println("Screenshot Successful");
-        FileUtils.copyFile(screenshot, new File("Screenshot.png"));
+        FileUtils.copyFile(srcFile, new File("Screenshot.png"));
         System.out.println("Screenshot Saved");
         
         driver.quit();
