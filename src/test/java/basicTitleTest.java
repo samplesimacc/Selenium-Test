@@ -47,12 +47,12 @@ public class basicTitleTest {
         System.out.println("succesfully navigated to: " + QWE);
         String actualTitle = driver.getTitle();
         String expectedTitle = QWE1;
-        
-        assertTrue(actualTitle.contains(expectedTitle));
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         System.out.println("Screenshot Successful");
         FileUtils.copyFile(screenshot, new File("Screenshot.png"));
         System.out.println("Screenshot Saved");
+        
+        assertTrue(actualTitle.contains(expectedTitle));
         
         driver.quit();
 
