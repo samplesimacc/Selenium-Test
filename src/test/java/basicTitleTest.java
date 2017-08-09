@@ -49,8 +49,12 @@ public class basicTitleTest {
         
         String actualTitle = driver.getTitle();
         String expectedTitle = QWE1;
-        
-        assertTrue(actualTitle.contains(expectedTitle));
+	    assertTrue(actualTitle.contains(expectedTitle));
+    
+	
+    	driver = new Augmenter().augment( driver );
+	
+
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         System.out.println("Screenshot Successful");
         FileUtils.copyFile(screenshot, new File("Screenshot.png"));
