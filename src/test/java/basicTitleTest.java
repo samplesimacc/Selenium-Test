@@ -32,17 +32,16 @@ public class basicTitleTest {
 		testng.addListener(tla);
 		testng.run();
 	}
-	private static Logger log = Logger.getLogger(LoggingObject.class);
-
+	
 	@Test
 	public void testSelenium() throws IOException
-	{	
-		
+	{
+		Logger log = Logger.getLogger(LoggingObject.class);
 		DesiredCapabilities capability = DesiredCapabilities.firefox();
 		capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
 		capability.setBrowserName("firefox");
         WebDriver driver = new RemoteWebDriver(new URL(nodeURL), capability);
-	log.info("navigating to: " + QWE);
+		log.info("navigating to: " + QWE);
 
         driver.get(QWE);
         log.info("succesfully navigated to: " + QWE);
