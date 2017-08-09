@@ -36,10 +36,10 @@ public class basicTitleTest {
 	@Test
 	public void testSelenium() throws IOException
 	{
-		FirefoxProfile firefoxProfile = new FirefoxProfile();
+		//FirefoxProfile firefoxProfile = new FirefoxProfile();
 		//firefoxProfile.setPreference("xpinstall.signatures.required",false);				
 		DesiredCapabilities capability = DesiredCapabilities.firefox();
-		capability.setCapability(FirefoxDriver.PROFILE,firefoxProfile);
+		//capability.setCapability(FirefoxDriver.PROFILE,firefoxProfile);
 		capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
 		capability.setBrowserName("firefox");
         WebDriver driver = new RemoteWebDriver(new URL(nodeURL), capability);
