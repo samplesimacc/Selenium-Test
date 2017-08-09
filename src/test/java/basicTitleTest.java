@@ -1,5 +1,6 @@
 package Selenium;
 import static org.junit.Assert.*;
+import org.openqa.selenium.remote.Augmenter;
 
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
@@ -36,12 +37,11 @@ public class basicTitleTest {
 	@Test
 	public void testSelenium() throws IOException
 	{
-		//FirefoxProfile firefoxProfile = new FirefoxProfile();
-		//firefoxProfile.setPreference("xpinstall.signatures.required",false);				
 		DesiredCapabilities capability = DesiredCapabilities.firefox();
-		//capability.setCapability(FirefoxDriver.PROFILE,firefoxProfile);
 		capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
 		capability.setBrowserName("firefox");
+		capabilities.setPlatform(Platform.Linux);
+
         WebDriver driver = new RemoteWebDriver(new URL(nodeURL), capability);
         System.out.println("navigating to: " + QWE);
         driver.get(QWE);
