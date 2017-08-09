@@ -36,23 +36,23 @@ public class basicTitleTest {
 	@Test
 	public void testSelenium() throws IOException
 	{
-		Logger log = Logger.getLogger(LoggingObject.class);
+		//Logger log = Logger.getLogger(LoggingObject.class);
 		DesiredCapabilities capability = DesiredCapabilities.firefox();
 		capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
 		capability.setBrowserName("firefox");
         WebDriver driver = new RemoteWebDriver(new URL(nodeURL), capability);
-		log.info("navigating to: " + QWE);
+		System.out.println("navigating to: " + QWE);
 
         driver.get(QWE);
-        log.info("succesfully navigated to: " + QWE);
+        System.out.println("succesfully navigated to: " + QWE);
         String actualTitle = driver.getTitle();
         String expectedTitle = QWE1;
         
         assertTrue(actualTitle.contains(expectedTitle));
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        log.info("Screenshot Successful");
+        System.out.println("Screenshot Successful");
         FileUtils.copyFile(screenshot, new File("Screenshot.png"));
-        log.info("Screenshot Saved");
+        System.out.println("Screenshot Saved");
         
         driver.quit();
 
