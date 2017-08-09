@@ -22,7 +22,7 @@ public class basicTitleTest {
 	public String QWE="http://www.google.com";
 	
 	//Title to check
-	public String QWE1="Facebook";
+	public String QWE1="Google";
 	public String nodeURL = "http://selenium-hub:4444/wd/hub";
 
 	public static void main(String[] args){
