@@ -1,7 +1,6 @@
 package Selenium;
 import static org.junit.Assert.*;
 import org.openqa.selenium.remote.Augmenter;
-
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 import org.testng.annotations.Test;
@@ -20,7 +19,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class basicTitleTest {
 	
 	//URL to visit
-	public String QWE="http://www.google.com";
+	public String QWE="http://www.facebook.com";
 	
 	//Title to check
 	public String QWE1="Google";
