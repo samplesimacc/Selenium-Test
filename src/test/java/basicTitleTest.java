@@ -48,7 +48,8 @@ public class basicTitleTest {
 	{
 	
 	System.setProperty("webdriver.firefox.marionette","C:\\Users\\Administrator\\selenium-libs\\libs\\geckodriver-v0.19.0-win64\\geckodriver.exe");
-	System.setProperty("webdriver.gecko.driver","C:\\Users\\Administrator\\selenium-libs\\libs\\geckodriver-v0.19.0-win64\\geckodriver.exe"); System.setProperty("webdriver.firefox.bin","C:\\Program Files\\SeleTest\\Mozilla Firefox\\firefox.exe");
+	System.setProperty("webdriver.gecko.driver","C:\\Users\\Administrator\\selenium-libs\\libs\\geckodriver-v0.19.0-win64\\geckodriver.exe");
+	System.setProperty("webdriver.firefox.bin","C:\\Program Files\\SeleTest\\Mozilla Firefox\\firefox.exe");
 	DesiredCapabilities capability = DesiredCapabilities.firefox();
 	//DesiredCapabilities capability = DesiredCapabilities.chrome();
 	//capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
@@ -61,7 +62,7 @@ public class basicTitleTest {
 	capability.setBrowserName("firefox");
 	//capabilities.setPlatform(Platform.Linux);
 
-        //WebDriver driver = new RemoteWebDriver(new URL(nodeURL), capability);
+        
         WebDriver driver = new FirefoxDriver();
 	System.out.println("navigating to: " + QWE);
         driver.get(QWE);
