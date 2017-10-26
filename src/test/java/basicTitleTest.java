@@ -46,13 +46,24 @@ public class basicTitleTest {
 	@Test
 	public void testSelenium() throws IOException
 	{
-		DesiredCapabilities capability = DesiredCapabilities.firefox();
-		capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
-		capability.setBrowserName("firefox");
-		//capabilities.setPlatform(Platform.Linux);
+	
+	System.setProperty("webdriver.firefox.marionette","C:\\Users\\Administrator\\selenium-libs\\libs\\geckodriver-v0.19.0-win64\\geckodriver.exe");
+	System.setProperty("webdriver.gecko.driver","C:\\Users\\Administrator\\selenium-libs\\libs\\geckodriver-v0.19.0-win64\\geckodriver.exe"); System.setProperty("webdriver.firefox.bin","C:\\Program Files\\SeleTest\\Mozilla Firefox\\firefox.exe");
+	DesiredCapabilities capability = DesiredCapabilities.firefox();
+	//DesiredCapabilities capability = DesiredCapabilities.chrome();
+	//capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
+	capability.setBrowserName("firefox");
+	//capabilities.setPlatform(Platform.Linux);
+	capability.setCapability("firefox_binary", "C:\\Program Files\\Mozilla Firefox\\firefox.exe");  
+		
+	DesiredCapabilities capability = DesiredCapabilities.firefox();
+	capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
+	capability.setBrowserName("firefox");
+	//capabilities.setPlatform(Platform.Linux);
 
-        WebDriver driver = new RemoteWebDriver(new URL(nodeURL), capability);
-        System.out.println("navigating to: " + QWE);
+        //WebDriver driver = new RemoteWebDriver(new URL(nodeURL), capability);
+        WebDriver driver = new FirefoxDriver();
+	System.out.println("navigating to: " + QWE);
         driver.get(QWE);
         System.out.println("succesfully navigated to: " + QWE);
         
