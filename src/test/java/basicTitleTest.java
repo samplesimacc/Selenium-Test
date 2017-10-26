@@ -63,7 +63,7 @@ public class basicTitleTest {
 	//capabilities.setPlatform(Platform.Linux);
 
         
-        WebDriver driver = new FirefoxDriver();
+        //WebDriver driver = new FirefoxDriver();
 	System.out.println("navigating to: " + QWE);
         driver.get(QWE);
         System.out.println("succesfully navigated to: " + QWE);
