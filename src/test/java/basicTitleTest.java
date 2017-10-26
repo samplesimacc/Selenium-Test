@@ -25,7 +25,7 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;	
-import org.openqa.selenium.FirefoxDriver;	
+import org.openqa.selenium.firefox.FirefoxDriver;	
 
 public class basicTitleTest {
 	
@@ -51,7 +51,7 @@ public class basicTitleTest {
 	System.setProperty("webdriver.firefox.marionette","C:\\Users\\Administrator\\selenium-libs\\libs\\geckodriver-v0.19.0-win64\\geckodriver.exe");
 	System.setProperty("webdriver.gecko.driver","C:\\Users\\Administrator\\selenium-libs\\libs\\geckodriver-v0.19.0-win64\\geckodriver.exe");
 	System.setProperty("webdriver.firefox.bin","C:\\Program Files\\Mozilla Firefox\\firefox.exe");
-	DesiredCapabilities capability = DesiredCapabilities.firefox();
+	//DesiredCapabilities capability = DesiredCapabilities.firefox();
 	//DesiredCapabilities capability = DesiredCapabilities.chrome();
 	//capability.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
 	//capability.setBrowserName("firefox");
